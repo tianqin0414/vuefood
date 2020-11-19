@@ -1,14 +1,20 @@
 <template>
-    <van-tabbar v-model="active" style="z-index: 1999">
-        <van-tabbar-item
-                v-for="(tab, index) in tabbar"
-                :icon="tab.icon"
-                :to="tab.path"
-                :dot="tab.dot"
-                :info="tab.info"
-                :key="index">
-            {{tab.name}}
-        </van-tabbar-item>
+    <!--<van-tabbar v-model="active" style="z-index: 1999">-->
+        <!--<van-tabbar-item-->
+                <!--v-for="(tab, index) in tabbar"-->
+                <!--:icon="tab.icon"-->
+                <!--:to="tab.path"-->
+                <!--:dot="tab.dot"-->
+                <!--:info="tab.info"-->
+                <!--:key="index">-->
+            <!--{{tab.name}}-->
+        <!--</van-tabbar-item>-->
+    <!--</van-tabbar>-->
+    <van-tabbar v-model="active">
+        <van-tabbar-item icon="home-o">标签</van-tabbar-item>
+        <van-tabbar-item icon="search" dot>标签</van-tabbar-item>
+        <van-tabbar-item icon="friends-o" badge="5">标签</van-tabbar-item>
+        <van-tabbar-item icon="setting-o" badge="20">标签</van-tabbar-item>
     </van-tabbar>
 </template>
 
