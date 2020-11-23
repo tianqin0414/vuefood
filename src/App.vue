@@ -6,7 +6,7 @@
       <!--<router-link to="/about">About</router-link>-->
     </div>
     <router-view/>
-    <router-view name="tabbar2"></router-view>
+    <router-view name="tabbar"></router-view>
   </div>
 </template>
 

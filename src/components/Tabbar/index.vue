@@ -1,21 +1,23 @@
 <template>
-    <!--<van-tabbar v-model="active" style="z-index: 1999">-->
-        <!--<van-tabbar-item-->
-                <!--v-for="(tab, index) in tabbar"-->
-                <!--:icon="tab.icon"-->
-                <!--:to="tab.path"-->
-                <!--:dot="tab.dot"-->
-                <!--:info="tab.info"-->
-                <!--:key="index">-->
-            <!--{{tab.name}}-->
-        <!--</van-tabbar-item>-->
-    <!--</van-tabbar>-->
-    <van-tabbar v-model="active">
-        <van-tabbar-item icon="home-o">标签</van-tabbar-item>
-        <van-tabbar-item icon="search" dot>标签</van-tabbar-item>
-        <van-tabbar-item icon="friends-o" badge="5">标签</van-tabbar-item>
-        <van-tabbar-item icon="setting-o" badge="20">标签</van-tabbar-item>
+    <!--style="z-index: 1999"-->
+    <!--:to="tab.path"-->
+    <!--:dot="tab.dot"-->
+    <!--:info="tab.info"-->
+    <!--:key="index"-->
+    <van-tabbar v-model="active" >
+        <van-tabbar-item
+                v-for="(tab, index) in tabbars"
+                :icon="tab.icon"
+             >
+            {{tab.name}}
+        </van-tabbar-item>
     </van-tabbar>
+    <!--<van-tabbar v-model="active">-->
+        <!--<van-tabbar-item icon='home-o'>标签</van-tabbar-item>-->
+        <!--<van-tabbar-item icon="search" dot>标签</van-tabbar-item>-->
+        <!--<van-tabbar-item icon="friends-o" badge="5">标签</van-tabbar-item>-->
+        <!--<van-tabbar-item icon="setting-o" badge="20">标签</van-tabbar-item>-->
+    <!--</van-tabbar>-->
 </template>
 
 
@@ -26,39 +28,39 @@
         data() {
             return {
                 active: 0,
-                tabbar: [
+                tabbars: [
                     {
-                        name: '精选',
+                        name: '首页',
                         path: '/',
                         pathName: 'home',
-                        icon: 'compass-full',
-                        dot: false,
-                        info: ''
-                    },
-                    {
-                        name: '分类',
-                        path: '/items',
-                        pathName: 'class',
-                        icon: 'class-full',
-                        dot: false,
-                        info: ''
-                    },
-                    {
-                        name: '购物车',
-                        path: '/order',
-                        pathName: 'cart',
-                        icon: 'cart-full',
+                        icon: 'home-o',
                         dot: false,
                         info: ''
                     },
                     {
                         name: '我的',
-                        path: '/user',
-                        pathName: 'user',
-                        icon: 'wode',
+                        path: '/items',
+                        pathName: 'class',
+                        icon: 'home-o',
                         dot: false,
                         info: ''
-                    }
+                    },
+                    // {
+                    //     name: '购物车',
+                    //     path: '/order',
+                    //     pathName: 'cart',
+                    //     icon: 'cart-full',
+                    //     dot: false,
+                    //     info: ''
+                    // },
+                    // {
+                    //     name: '我的',
+                    //     path: '/user',
+                    //     pathName: 'user',
+                    //     icon: 'wode',
+                    //     dot: false,
+                    //     info: ''
+                    // }
                 ]
             };
         },
