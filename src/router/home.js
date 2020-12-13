@@ -6,7 +6,7 @@ export default [
         name: 'home',
         components: {
             default: () => import('@/views/home/tabbar-home'),
-            tabbar: Tabbar
+            // tabbar: Tabbar
         },
         // meta: {
         //     keepAlive: true,

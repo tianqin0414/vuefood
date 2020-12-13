@@ -4,6 +4,7 @@ import router from './router';
 import store from './store';
 import 'vant/lib/icon/local.css';
 import './assets/scss/global.scss';
+import './utils/rem'
 
 Vue.config.productionTip = false
 
